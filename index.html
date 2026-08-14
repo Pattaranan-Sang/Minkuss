@@ -216,8 +216,8 @@
     overflow-x:auto;
     padding: 6px 6px 18px;
     scrollbar-width: none;
-    justify-content:center;
-    flex-wrap: wrap;
+    justify-content:flex-start;
+    flex-wrap: nowrap;
   }
   .tab-scroll::-webkit-scrollbar{ display:none; }
   .tab-btn{
@@ -340,13 +340,7 @@
   .grid{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  @media (max-width: 980px){
-    .grid{ grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 620px){
-    .grid{ grid-template-columns: 1fr; gap:22px; }
+    gap: 16px;
   }
 
   .card{
@@ -471,6 +465,27 @@
     font-weight:700;
     color: var(--navy);
     font-size:16px;
+  }
+
+  @media (max-width: 640px){
+    .card .body.single-line{
+      padding: 14px 14px 16px;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .card .body.single-line strong{
+      font-size:13.5px;
+      display:block;
+      margin-bottom:2px;
+    }
+    .fruit-count-badge{
+      font-size:10.5px;
+      padding: 5px 10px;
+    }
+    .best-value{
+      font-size:10px;
+      padding:5px 10px 5px 8px;
+    }
   }
 
   .fruit-tags{
