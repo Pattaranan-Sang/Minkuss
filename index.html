@@ -139,6 +139,21 @@
     object-fit: cover;
   }
 
+  /* iPhone / narrow portrait screens: avoid cropping the banner's side info
+     (branch cards, LINE contact) that a full-height cover would cut off */
+  @media (max-width: 700px){
+    .promo-banner-wrap{
+      height: auto;
+    }
+    .promo-banner-wrap .bg-blur{ display:none; }
+    .promo-banner-wrap img.banner-fg{
+      position: static;
+      width:100%;
+      height:auto;
+      object-fit: contain;
+    }
+  }
+
   .page-title{
     text-align:center;
     padding: 34px 6vw 6px;
