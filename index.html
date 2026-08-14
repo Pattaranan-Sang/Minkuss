@@ -311,8 +311,7 @@
   }
   .hitset-card img{
     width:100%;
-    aspect-ratio: 1/1;
-    object-fit:cover;
+    height:auto;
     display:block;
   }
   .hitset-card .cta{
@@ -368,13 +367,12 @@
 
   .card .photo-wrap{
     position:relative;
-    aspect-ratio: 4/3;
     overflow:hidden;
     background: var(--cream-2);
   }
   .card .photo-wrap img{
-    width:100%;height:100%;
-    object-fit:cover;
+    width:100%;
+    height:auto;
     display:block;
     transition: transform .5s ease;
   }
@@ -583,9 +581,13 @@
     justify-content:center;
     overflow:hidden;
   }
+  .promo-card .promo-photo:has(img){
+    aspect-ratio: auto;
+    display:block;
+  }
   .promo-card .promo-photo img{
-    width:100%; height:100%;
-    object-fit:cover;
+    width:100%;
+    height:auto;
     display:block;
   }
   .promo-ribbon{
